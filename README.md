@@ -2,7 +2,7 @@
 
 With this exercise, we're going to create a [survey](./images/duck-survey.gif) and have some more practice creating forms. They're not exactly the easiest or most fun to create, but they're everywhere! (We could even argue that the web isn't much more than a bunch of forms). This will also give you some hands-on time with creating controlled forms in React.
 
-## Prerequisites
+## Setup
 
 1. Fork this repository
 2. Clone the forked repository onto your local machines
