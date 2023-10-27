@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Main() {
+function Survey() {
   const [open, setOpen] = useState(false); //Ignore this state
 
   return (
@@ -14,4 +14,4 @@ function Main() {
   );
 }
 
-export default Main;
+export default Survey;

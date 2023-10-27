@@ -17,7 +17,7 @@ bunch of forms). This will also give you some hands-on time with creating contro
 ## Instructions
 
 - **Make sure you check all the code that was given to you**
-- Add the missing form in `src/components/Main.jsx`, following the templates in the `templates` folder
+- Add the missing form in `src/components/Survey.jsx`, following the templates in the `templates` folder
 - When the form is submitted, start by logging the answers to the console
 - After submitting the form, you should reset the form to its original state
 
@@ -26,7 +26,7 @@ bunch of forms). This will also give you some hands-on time with creating contro
 - Remember that in a controlled form, the state is the one keeping track of the inputs values
 
 ## Extension 1
-Store all submitted answers in state. Update `src/components/Main.jsx` to display all the answers using the provided 
+Store all submitted answers in state. Update `src/components/Survey.jsx` to display all the answers using the provided 
 `src/components/AnswerList.jsx` component. You will need to examine the provided components to understand the data 
 structure they expect and what props should be passed. Note that you can also modify these components to better suit the data structure you created in the first part of the exercise.
 
