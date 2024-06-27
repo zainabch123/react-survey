@@ -1,8 +1,15 @@
 export default function Checkboxes({ formAnswers, setFormAnswers }) {
   function handleInput(event) {
+    const { name, value, type, checked } = event.target;
     console.log("event", event.target);
     console.log("event checked?", event.target.checked);
-    setFormAnswers({ ...formAnswers, timeSpent: event.target.value });
+
+    formAnswers.timeSpent.includes(value)
+      ? console.log("already includes")
+      : setFormAnswers({
+          ...formAnswers,
+          [name]: [...formAnswers.timeSpent, value],
+        });
   }
 
   return (
@@ -14,7 +21,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="swimming"
             onChange={handleInput}
-            checked={formAnswers.timeSpent === "swimming"}
+            checked={formAnswers.timeSpent.includes("swimming")}
           />
           Swimming
         </label>
@@ -26,7 +33,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="bathing"
             onChange={handleInput}
-            checked={formAnswers.timeSpent === "bathing"}
+            checked={formAnswers.timeSpent.includes("bathing")}
           />
           Bathing
         </label>
@@ -38,7 +45,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="chatting"
             onChange={handleInput}
-            checked={formAnswers.timeSpent === "chatting"}
+            checked={formAnswers.timeSpent.includes("chatting")}
           />
           Chatting
         </label>
@@ -50,7 +57,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="noTime"
             onChange={handleInput}
-            checked={formAnswers.timeSpent === "noTime"}
+            checked={formAnswers.timeSpent.includes("noTime")}
           />
           I don't like to spend time with it
         </label>

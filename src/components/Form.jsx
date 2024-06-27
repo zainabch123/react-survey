@@ -1,7 +1,7 @@
 import RadioButtons from "./RadioButtons";
 import Checkboxes from "./Checkboxes";
  
-export default function Form({formAnswers, setFormAnswers}) {
+export default function Form({formAnswers, setFormAnswers, answersList, setAnswersList}) {
 
     function handleSubmit(event) {
       event.preventDefault();
@@ -13,6 +13,7 @@ export default function Form({formAnswers, setFormAnswers}) {
         review: "",
         email: "",
       });
+      setAnswersList([...answersList, formAnswers])
       console.log("updated form submit answers", formAnswers);
     }
 
