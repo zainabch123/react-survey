@@ -1,6 +1,7 @@
 export default function Checkboxes({ formAnswers, setFormAnswers }) {
   function handleInput(event) {
     console.log("event", event.target);
+    console.log("event checked?", event.target.checked);
     setFormAnswers({ ...formAnswers, timeSpent: event.target.value });
   }
 
@@ -13,6 +14,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="swimming"
             onChange={handleInput}
+            checked={formAnswers.timeSpent === "swimming"}
           />
           Swimming
         </label>
@@ -24,6 +26,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="bathing"
             onChange={handleInput}
+            checked={formAnswers.timeSpent === "bathing"}
           />
           Bathing
         </label>
@@ -35,6 +38,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="chatting"
             onChange={handleInput}
+            checked={formAnswers.timeSpent === "chatting"}
           />
           Chatting
         </label>
@@ -46,6 +50,7 @@ export default function Checkboxes({ formAnswers, setFormAnswers }) {
             type="checkbox"
             value="noTime"
             onChange={handleInput}
+            checked={formAnswers.timeSpent === "noTime"}
           />
           I don't like to spend time with it
         </label>

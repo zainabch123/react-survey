@@ -49,6 +49,7 @@ export default function Form({formAnswers, setFormAnswers}) {
             cols="30"
             rows="10"
             onChange={handleInput}
+            value={formAnswers.review}
           ></textarea>
         </label>
         <label>
