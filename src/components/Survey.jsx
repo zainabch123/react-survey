@@ -11,8 +11,10 @@ function Survey() {
     review: "",
     email: ""
   });
-
   const [answersList, setAnswersList] = useState([]);
+  const [editAnswer, setEditAnswer] = useState('')
+
+  console.log("answersList", answersList)
 
   return (
     <main className="survey">
@@ -21,7 +23,9 @@ function Survey() {
         {/* answers should go here */}
         <AnswersList
           answersList={answersList}
-          setAnswersList={setAnswersList}
+          setFormAnswers={setFormAnswers}
+          editAnswer={editAnswer}
+          setEditAnswer={setEditAnswer}
         />
       </section>
       <section className="survey__form">
@@ -31,6 +35,8 @@ function Survey() {
           setFormAnswers={setFormAnswers}
           answersList={answersList}
           setAnswersList={setAnswersList}
+          editAnswer={editAnswer}
+          setEditAnswer={setEditAnswer}
         />
       </section>
     </main>

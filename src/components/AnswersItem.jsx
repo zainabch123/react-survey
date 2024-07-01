@@ -9,18 +9,23 @@ const answersSet = {
 };
 
 function ItemsList({ list }) {
- console.log("list", list)
   return (
     <ul>
-      {list.map((item) => (
-        <li>{answersSet[item]}</li>
+      {list.map((item, index) => (
+        <li key={index}>{answersSet[item]}</li>
       ))}
     </ul>
   );
 }
 
 // This is the main component being exported from this file
-export default function AnswersItem({answerItem}) {
+export default function AnswersItem({answerItem, setFormAnswers, setEditAnswer, index }) {
+   function handleEdit(event) {
+     console.log("answers Item right here", answerItem);
+     setFormAnswers(answerItem);
+     setEditAnswer(index)
+     console.log("editAnswer", index)
+   }
   return (
     <li>
       <article className="answer">
@@ -37,6 +42,7 @@ export default function AnswersItem({answerItem}) {
           <em>What else have you got to say about your rubber duck?</em>
           <span className="answer__line">{answerItem.review}</span>
         </p>
+        <button id="edit-button" onClick={handleEdit}>Edit</button>
       </article>
     </li>
   );
